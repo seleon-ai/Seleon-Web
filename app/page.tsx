@@ -1,47 +1,118 @@
 "use client";
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import Link from "next/link"
-import Image from "next/image"
-import { MenuIcon, XIcon, LightbulbIcon, BarChartIcon, ShieldCheckIcon, CheckCircleIcon, ActivityIcon, CloudIcon, LineChartIcon } from 'lucide-react'
-import { useState } from 'react'
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import Link from "next/link";
+import Image from "next/image";
+import {
+  MenuIcon,
+  XIcon,
+  BrainCircuitIcon,
+  ServerIcon,
+  LockIcon,
+  DatabaseIcon,
+  LightbulbIcon,
+  BarChartIcon,
+  ShieldCheckIcon,
+  CheckCircleIcon,
+  ActivityIcon,
+  CloudIcon,
+  LineChartIcon,
+} from "lucide-react";
+import { useState } from "react";
 
 export default function Home() {
-
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <header className="px-4 lg:px-3 flex items-center sticky top-0 z-50 w-full border-b border-pastel-blue/40 bg-pastel-cream/95 backdrop-blur supports-[backdrop-filter]:bg-pastel-cream/60">
         <div className="container flex h-16 items-center justify-between px-4">
           <Link className="flex items-center justify-center" href="/">
-            <Image height={48} width={55} src="/only-logo.png" alt="Seleon Logo" />
-            <Image height={24} width={125} className="ml-4" src="/only-seleon.png" alt="Seleon" />
-
+            <Image
+              height={48}
+              width={55}
+              src="/only-logo.png"
+              alt="Seleon Logo"
+            />
+            <Image
+              height={24}
+              width={125}
+              className="ml-4"
+              src="/only-seleon.png"
+              alt="Seleon"
+            />
           </Link>
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <a href="#home" className="transition-colors hover:text-pastel-blue text-pastel-gray">Home</a>
-            <a href="#services" className="transition-colors hover:text-pastel-blue text-pastel-gray">Services</a>
-            <a href="#about" className="transition-colors hover:text-pastel-blue text-pastel-gray">About Us</a>
-            <a href="#contact" className="transition-colors hover:text-pastel-blue text-pastel-gray">Contact</a>
+            <a
+              href="#home"
+              className="transition-colors hover:text-pastel-blue text-pastel-gray"
+            >
+              Home
+            </a>
+            <a
+              href="#services"
+              className="transition-colors hover:text-pastel-blue text-pastel-gray"
+            >
+              Services
+            </a>
+            <a
+              href="#about"
+              className="transition-colors hover:text-pastel-blue text-pastel-gray"
+            >
+              About Us
+            </a>
+            <a
+              href="#contact"
+              className="transition-colors hover:text-pastel-blue text-pastel-gray"
+            >
+              Contact
+            </a>
           </nav>
           <button className="md:hidden" onClick={toggleMenu}>
-            {isMenuOpen ? <XIcon className="h-6 w-6 text-pastel-blue" /> : <MenuIcon className="h-6 w-6 text-pastel-blue" />}
+            {isMenuOpen ? (
+              <XIcon className="h-6 w-6 text-pastel-blue" />
+            ) : (
+              <MenuIcon className="h-6 w-6 text-pastel-blue" />
+            )}
           </button>
         </div>
       </header>
       {isMenuOpen && (
         <div className="md:hidden bg-pastel-cream py-2">
           <nav className="flex flex-col items-center space-y-2 text-sm font-medium">
-            <a href="#home" className="w-full text-center py-2 hover:bg-pastel-blue/10" onClick={toggleMenu}>Home</a>
-            <a href="#services" className="w-full text-center py-2 hover:bg-pastel-blue/10" onClick={toggleMenu}>Services</a>
-            <a href="#about" className="w-full text-center py-2 hover:bg-pastel-blue/10" onClick={toggleMenu}>About Us</a>
-            <a href="#contact" className="w-full text-center py-2 hover:bg-pastel-blue/10" onClick={toggleMenu}>Contact</a>
+            <a
+              href="#home"
+              className="w-full text-center py-2 hover:bg-pastel-blue/10"
+              onClick={toggleMenu}
+            >
+              Home
+            </a>
+            <a
+              href="#services"
+              className="w-full text-center py-2 hover:bg-pastel-blue/10"
+              onClick={toggleMenu}
+            >
+              Services
+            </a>
+            <a
+              href="#about"
+              className="w-full text-center py-2 hover:bg-pastel-blue/10"
+              onClick={toggleMenu}
+            >
+              About Us
+            </a>
+            <a
+              href="#contact"
+              className="w-full text-center py-2 hover:bg-pastel-blue/10"
+              onClick={toggleMenu}
+            >
+              Contact
+            </a>
           </nav>
         </div>
       )}
@@ -50,16 +121,15 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-5">
-                <div className="space-y-4">
+                <div className="space-y-5">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                     Innovación y Eficiencia en la Gestión de Recursos Públicos
                   </h1>
-                  <p className="max-w-[600px] text-gray-600 md:text-xl dark:text-gray-400">
-                    Revolutionize your utility operations with our cutting-edge machine learning models. Enhance
-                    efficiency, reduce costs, and improve service delivery.
+                  <p className="max-w-[700px] text-gray-600 md:text-xl dark:text-gray-400">
+                  Revolucione sus operaciones de servicios públicos con nuestros modelos de aprendizaje automático de vanguardia. Aumente la eficiencia, reduzca los costes y mejore la prestación de servicios.
                   </p>
                 </div>
-                <div className="flex flex-col gap-3 min-[400px]:flex-row">
+                {/* <div className="flex flex-col gap-3 min-[400px]:flex-row">
                   <Link
                     className="inline-flex h-10 items-center justify-center rounded-md bg-blue-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-700 disabled:pointer-events-none disabled:opacity-50"
                     href="#"
@@ -72,14 +142,14 @@ export default function Home() {
                   >
                     Learn More
                   </Link>
-                </div>
+                </div> */}
               </div>
               <Image
                 alt="AI for Utilities"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
-                height={550}
+                height={600}
                 src="/main.jpg"
-                width={550}
+                width={600}
               />
             </div>
           </div>
@@ -87,34 +157,35 @@ export default function Home() {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Transforming Utilities with AI</h2>
-                <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Our machine learning models are designed to tackle the unique challenges faced by water, electricity,
-                  and gas providers. Discover how were revolutionizing the industry.
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Transformando las empresas de servicios públicos con IA
+                </h2>
+                <p className="max-w-[1200px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                Nuestros modelos de aprendizaje automático están diseñados para hacer frente a los retos específicos a los que se enfrentan los proveedores de agua, electricidad y gas. Descubra cómo estamos revolucionando el sector.
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+            <div className="mx-auto px-9 grid max-w-7xl items-center gap-6 py-12 lg:px-0 lg:grid-cols-3 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <LightbulbIcon className="h-12 w-12 text-blue-600" />
-                <h3 className="text-xl font-bold">Predictive Maintenance</h3>
+                <h3 className="text-xl font-bold">Mantenimiento predictivo</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Anticipate equipment failures and optimize maintenance schedules to reduce downtime and costs.
+                Anticipe las fallas de los equipos y optimice los programas de mantenimiento. Reduzca el tiempo de inactividad y disminuya costos operativos.
                 </p>
               </div>
               <div className="flex flex-col justify-center space-y-4">
                 <BarChartIcon className="h-12 w-12 text-blue-600" />
-                <h3 className="text-xl font-bold">Demand Forecasting</h3>
+                <h3 className="text-xl font-bold">Previsión de la demanda</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Accurately predict resource demand to optimize distribution and reduce waste.
+                Prediga con precisión la demanda de recursos y optimice su distribución. Minimice el desperdicio y aumente la eficiencia.
                 </p>
               </div>
               <div className="flex flex-col justify-center space-y-4">
-                <ShieldCheckIcon className="h-12 w-12 text-blue-600" />
-                <h3 className="text-xl font-bold">Fraud Detection</h3>
+                <LineChartIcon className="h-12 w-12 text-blue-600" />
+                <h3 className="text-xl font-bold">Obtención de datos clave</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Identify and prevent fraudulent activities to protect revenue and ensure fair service.
+                Recoja datos valiosos y relevantes para su empresa, y obtenga insights estratégicos para tomar decisiones informadas.
                 </p>
               </div>
             </div>
@@ -124,9 +195,12 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Success Story</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Success Story
+                </h2>
                 <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  See how we helped a major water utility reduce costs and improve service quality.
+                  See how we helped a major water utility reduce costs and
+                  improve service quality.
                 </p>
               </div>
             </div>
@@ -139,9 +213,12 @@ export default function Home() {
                 width="550"
               />
               <div className="flex flex-col justify-center space-y-4">
-                <h3 className="text-2xl font-bold">WaterCorp Optimization Project</h3>
+                <h3 className="text-2xl font-bold">
+                  WaterCorp Optimization Project
+                </h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  By implementing our AI-driven leak detection and predictive maintenance systems, WaterCorp achieved:
+                  By implementing our AI-driven leak detection and predictive
+                  maintenance systems, WaterCorp achieved:
                 </p>
                 <ul className="grid gap-6">
                   <li className="flex items-center gap-2">
@@ -161,36 +238,66 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+        <section id="services" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Services</h2>
-                <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Comprehensive AI solutions tailored for public utility organizations.
+            <div className="flex flex-col items-center justify-center space-y-5 text-center">
+              <div className="space-y-3">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-pastel-blue">
+                  Nuestros Servicios
+                </h2>
+                <p className="max-w-[950px] text-pastel-gray md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Ofrecemos una amplia gama de servicios para revolucionar la
+                  gestión de los servicios públicos.
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
-              <div className="flex flex-col justify-center space-y-4">
-                <ActivityIcon className="h-12 w-12 text-blue-600" />
-                <h3 className="text-xl font-bold">Custom ML Model Development</h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Tailored machine learning models designed to address your specific utility challenges.
+            <div className="mx-auto px-8 grid max-w-5xl items-center gap-6 py-12 lg:px-8 lg:grid-cols-3 lg:gap-12">
+              <div className="flex flex-col items-center space-y-4 text-center">
+                <BrainCircuitIcon className="h-12 w-12 text-blue-600" />
+                <h3 className="text-xl font-bold">Data Science & AI</h3>
+                <p className="text-sm text-pastel-gray">
+                  Modelos avanzados de IA, incluidos Machine Learning, Deep
+                  Learning y GenAI.
                 </p>
               </div>
-              <div className="flex flex-col justify-center space-y-4">
+              <div className="flex flex-col items-center space-y-4 text-center">
+                <BarChartIcon className="h-12 w-12 text-blue-600" />
+                <h3 className="text-xl font-bold">Analytics & BI</h3>
+                <p className="text-sm text-pastel-gray">
+                  Soluciones integrales de análisis de datos e inteligencia
+                  empresarial.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-4 text-center">
+                <ServerIcon className="h-12 w-12 text-blue-600" />
+                <h3 className="text-xl font-bold">DevOps</h3>
+                <p className="text-sm text-pastel-gray">
+                  Desarrollo y operaciones racionalizados para una implantación
+                  eficaz.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-4 text-center">
+                <LockIcon className="h-12 w-12 text-blue-600" />
+                <h3 className="text-xl font-bold">Ciberseguridad</h3>
+                <p className="text-sm">
+                  Medidas de seguridad robustas para proteger datos sensibles
+                  según los estándares ISO 27001.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-4 text-center">
                 <CloudIcon className="h-12 w-12 text-blue-600" />
-                <h3 className="text-xl font-bold">Cloud Integration</h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Seamless deployment of AI models into your existing cloud infrastructure.
+                <h3 className="text-xl font-bold">Tecnologías Cloud</h3>
+                <p className="text-sm">
+                  Soluciones escalables en la nube para una gestión y un
+                  procesamiento eficaces de los datos.
                 </p>
               </div>
-              <div className="flex flex-col justify-center space-y-4">
-                <LineChartIcon className="h-12 w-12 text-blue-600" />
-                <h3 className="text-xl font-bold">Ongoing Optimization</h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Continuous monitoring and refinement of models to ensure peak performance.
+              <div className="flex flex-col items-center space-y-4 text-center">
+                <DatabaseIcon className="h-12 w-12 text-blue-600" />
+                <h3 className="text-xl font-bold">Integración de datos</h3>
+                <p className="text-sm">
+                  Perfecta integración de los modelos de aprendizaje automático
+                  en los entornos clientes.
                 </p>
               </div>
             </div>
@@ -198,47 +305,57 @@ export default function Home() {
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-600">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center text-white">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Ready to Transform Your Utility?</h2>
-                <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Get in touch with our team of experts to discover how AI can revolutionize your operations.
+            <div className="flex flex-col items-center justify-center space-y-7 text-center text-white">
+              <div className="space-y-3">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                ¿Listo para transformar su empresa?
+                </h2>
+                <p className="max-w-[1200px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Póngase en contacto con nuestro equipo de expertos para descubrir cómo la IA puede revolucionar sus operaciones.
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
                 <form className="flex space-x-2">
                   <Input
                     className="max-w-lg flex-1 bg-white text-gray-900"
-                    placeholder="Enter your email"
+                    placeholder="Ingrese su email"
                     type="email"
                   />
-                  <Button className="bg-white text-blue-600 hover:bg-gray-200" type="submit">
-                    Contact Us
+                  <Button
+                    className="bg-white text-blue-600 hover:bg-gray-200"
+                    type="submit"
+                  >
+                    Contactar
                   </Button>
                 </form>
-                <p className="text-xs">
+                {/* <p className="text-xs">
                   By submitting, you agree to our{" "}
                   <Link className="underline underline-offset-2" href="#">
                     Terms & Conditions
                   </Link>
                   .
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 AI Utility Solutions. All rights reserved.</p>
+        <p className="text-xs text-gray-500 dark:text-gray-400">
+          © 2024 Seleon. All rights reserved.
+        </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
+        <p className="text-xs text-gray-500 dark:text-gray-400">
+          Powered by Seleon
+        </p>
+          {/* <Link className="text-xs hover:underline underline-offset-4" href="#">
             Terms of Service
           </Link>
           <Link className="text-xs hover:underline underline-offset-4" href="#">
             Privacy
-          </Link>
+          </Link> */}
         </nav>
       </footer>
     </div>
-  )
+  );
 }
