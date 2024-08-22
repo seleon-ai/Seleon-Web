@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
+import Image from "next/image"
 import { MenuIcon, XIcon, LightbulbIcon, BarChartIcon, ShieldCheckIcon, CheckCircleIcon, ActivityIcon, CloudIcon, LineChartIcon } from 'lucide-react'
 import { useState } from 'react'
 
@@ -16,36 +17,11 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      {/* <header className="px-4 lg:px-6 h-20 flex items-center sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <Link className="flex items-center justify-center" href="/">
-            <img className="w-auto h-12" src="/only-logo.png" alt="Seleon Logo" />
-            <img className="w-auto h-6 ml-5" src="/only-seleon.png" alt="Seleon" />
-          
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Features
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Case Studies
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Services
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Contact
-          </Link>
-        </nav>
-        <button className="md:hidden" onClick={toggleMenu}>
-            {isMenuOpen ? <XIcon className="h-6 w-6 text-pastel-blue" /> : <MenuIcon className="h-6 w-6 text-pastel-blue" />}
-          </button>
-      </header>*/}
-
       <header className="px-4 lg:px-3 flex items-center sticky top-0 z-50 w-full border-b border-pastel-blue/40 bg-pastel-cream/95 backdrop-blur supports-[backdrop-filter]:bg-pastel-cream/60">
         <div className="container flex h-16 items-center justify-between px-4">
           <Link className="flex items-center justify-center" href="/">
-            <img className="w-auto h-12" src="/only-logo.png" alt="Seleon Logo" />
-            <img className="w-auto h-6 ml-5" src="/only-seleon.png" alt="Seleon" />
+            <Image height={48} width={55} src="/only-logo.png" alt="Seleon Logo" />
+            <Image height={24} width={125} className="ml-4" src="/only-seleon.png" alt="Seleon" />
 
           </Link>
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -73,17 +49,17 @@ export default function Home() {
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-blue-100 via-blue-50 to-green-50">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
+              <div className="flex flex-col justify-center space-y-5">
+                <div className="space-y-4">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    AI-Powered Solutions for Public Utilities
+                    Innovación y Eficiencia en la Gestión de Recursos Públicos
                   </h1>
                   <p className="max-w-[600px] text-gray-600 md:text-xl dark:text-gray-400">
                     Revolutionize your utility operations with our cutting-edge machine learning models. Enhance
                     efficiency, reduce costs, and improve service delivery.
                   </p>
                 </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <div className="flex flex-col gap-3 min-[400px]:flex-row">
                   <Link
                     className="inline-flex h-10 items-center justify-center rounded-md bg-blue-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-700 disabled:pointer-events-none disabled:opacity-50"
                     href="#"
@@ -98,12 +74,12 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <img
+              <Image
                 alt="AI for Utilities"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
-                height="550"
-                src="/placeholder.svg?height=550&width=550"
-                width="550"
+                height={550}
+                src="/main.jpg"
+                width={550}
               />
             </div>
           </div>
@@ -115,7 +91,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Transforming Utilities with AI</h2>
                 <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   Our machine learning models are designed to tackle the unique challenges faced by water, electricity,
-                  and gas providers. Discover how we're revolutionizing the industry.
+                  and gas providers. Discover how were revolutionizing the industry.
                 </p>
               </div>
             </div>
