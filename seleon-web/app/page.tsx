@@ -1,15 +1,26 @@
+"use client";
+
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
-import { MountainIcon, LightbulbIcon, BarChartIcon, ShieldCheckIcon, CheckCircleIcon, ActivityIcon, CloudIcon, LineChartIcon } from 'lucide-react'
+import { MenuIcon, XIcon, LightbulbIcon, BarChartIcon, ShieldCheckIcon, CheckCircleIcon, ActivityIcon, CloudIcon, LineChartIcon } from 'lucide-react'
+import { useState } from 'react'
 
 export default function Home() {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link className="flex items-center justify-center" href="#">
-          <MountainIcon className="h-6 w-6" />
-          <span className="sr-only">AI Utility Solutions</span>
+      {/* <header className="px-4 lg:px-6 h-20 flex items-center sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <Link className="flex items-center justify-center" href="/">
+            <img className="w-auto h-12" src="/only-logo.png" alt="Seleon Logo" />
+            <img className="w-auto h-6 ml-5" src="/only-seleon.png" alt="Seleon" />
+          
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
@@ -25,7 +36,39 @@ export default function Home() {
             Contact
           </Link>
         </nav>
+        <button className="md:hidden" onClick={toggleMenu}>
+            {isMenuOpen ? <XIcon className="h-6 w-6 text-pastel-blue" /> : <MenuIcon className="h-6 w-6 text-pastel-blue" />}
+          </button>
+      </header>*/}
+
+      <header className="px-4 lg:px-3 flex items-center sticky top-0 z-50 w-full border-b border-pastel-blue/40 bg-pastel-cream/95 backdrop-blur supports-[backdrop-filter]:bg-pastel-cream/60">
+        <div className="container flex h-16 items-center justify-between px-4">
+          <Link className="flex items-center justify-center" href="/">
+            <img className="w-auto h-12" src="/only-logo.png" alt="Seleon Logo" />
+            <img className="w-auto h-6 ml-5" src="/only-seleon.png" alt="Seleon" />
+
+          </Link>
+          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+            <a href="#home" className="transition-colors hover:text-pastel-blue text-pastel-gray">Home</a>
+            <a href="#services" className="transition-colors hover:text-pastel-blue text-pastel-gray">Services</a>
+            <a href="#about" className="transition-colors hover:text-pastel-blue text-pastel-gray">About Us</a>
+            <a href="#contact" className="transition-colors hover:text-pastel-blue text-pastel-gray">Contact</a>
+          </nav>
+          <button className="md:hidden" onClick={toggleMenu}>
+            {isMenuOpen ? <XIcon className="h-6 w-6 text-pastel-blue" /> : <MenuIcon className="h-6 w-6 text-pastel-blue" />}
+          </button>
+        </div>
       </header>
+      {isMenuOpen && (
+        <div className="md:hidden bg-pastel-cream py-2">
+          <nav className="flex flex-col items-center space-y-2 text-sm font-medium">
+            <a href="#home" className="w-full text-center py-2 hover:bg-pastel-blue/10" onClick={toggleMenu}>Home</a>
+            <a href="#services" className="w-full text-center py-2 hover:bg-pastel-blue/10" onClick={toggleMenu}>Services</a>
+            <a href="#about" className="w-full text-center py-2 hover:bg-pastel-blue/10" onClick={toggleMenu}>About Us</a>
+            <a href="#contact" className="w-full text-center py-2 hover:bg-pastel-blue/10" onClick={toggleMenu}>Contact</a>
+          </nav>
+        </div>
+      )}
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-blue-100 via-blue-50 to-green-50">
           <div className="container px-4 md:px-6">
