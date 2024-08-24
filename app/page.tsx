@@ -196,7 +196,7 @@ export default function Home() {
         )}
       </AnimatePresence>
       <main className="flex-1" id="home">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-blue-100 via-blue-50 to-green-50 dark:from-blue-900 dark:via-blue-800 dark:to-green-800">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-blue-100 via-blue-50 to-violet-100 dark:from-blue-900 dark:via-blue-800 dark:to-violet-800">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-5">
@@ -223,22 +223,6 @@ export default function Home() {
                     prestación de servicios.
                   </motion.p>
                 </div>
-                {/* 
-                  <div className="flex flex-col gap-3 min-[400px]:flex-row">
-                    <Link
-                      className="inline-flex h-10 items-center justify-center rounded-md bg-blue-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-700 disabled:pointer-events-none disabled:opacity-50 dark:bg-blue-500 dark:hover:bg-blue-600"
-                      href="#"
-                    >
-                      Get Started
-                    </Link>
-                    <Link
-                      className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white"
-                      href="#"
-                    >
-                      Learn More
-                    </Link>
-                  </div>
-                */}
               </div>
               <motion.div
                 initial={{ opacity: 0, x: 100 }}
@@ -248,7 +232,7 @@ export default function Home() {
               >
                 <Image
                   alt="AI for Utilities"
-                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last shadow-lg"
                   height={600}
                   src="/main.jpg"
                   width={600}
@@ -368,14 +352,7 @@ export default function Home() {
                 </motion.p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-              <Image
-                alt="Seleon team"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
-                height={310}
-                src="/succes.png"
-                width={550}
-              />
+            <div className="mx-auto grid max-w-5xl items-center gap-6 px-8 py-12 lg:px-0 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <ul className="grid gap-6">
                   <li>
@@ -435,12 +412,27 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 2, delay: 0.5 }}
+                className="h-full"
+              >
+                <Image
+                  alt="Seleon team"
+                  className="mx-auto h-full aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last shadow-lg"
+                  height={310}
+                  src="/succes.png"
+                  width={550}
+                />
+              </motion.div>
             </div>
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-blue-100 via-blue-50 to-green-50 dark:from-blue-900 dark:via-blue-800 dark:to-green-800">
-          <div className="flex flex-col items-center justify-center space-y-5 text-center">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-blue-100 via-blue-50 to-violet-100 dark:from-blue-900 dark:via-blue-800 dark:to-violet-800">
+          <div className="flex flex-col items-center justify-center space-y-5 text-center px-4 lg:px-0">
             <motion.h3
               initial={{ opacity: 0, y: -30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -448,8 +440,7 @@ export default function Home() {
               transition={{ duration: 0.9 }}
               className="text-3xl font-bold tracking-tighter sm:text-5xl text-pastel-blue"
             >
-              El 87% de los modelos de IA no llegan a producción, forma parte
-              del 13%.
+              El 87% de los modelos de IA no llegan a producción, forma parte del 13%.
             </motion.h3>
             <motion.p
               initial={{ opacity: 0, y: -20 }}
