@@ -107,21 +107,21 @@ export default function Home() {
                 className="transition-colors dark:hover:text-blue-600 hover:text-blue-600 text-gray-900 dark:text-white"
                 onClick={(e) => smoothScroll(e, "home")}
               >
-                Home
+                Inicio
               </a>
               <a
                 href="#about"
                 className="transition-colors dark:hover:text-blue-600 hover:text-blue-600 text-gray-900 dark:text-white"
                 onClick={(e) => smoothScroll(e, "about")}
               >
-                About Us
+                Nosotros
               </a>
               <a
                 href="#services"
                 className="transition-colors dark:hover:text-blue-600 hover:text-blue-600 text-gray-900 dark:text-white"
                 onClick={(e) => smoothScroll(e, "services")}
               >
-                Services
+                Servicios
               </a>
 
               <a
@@ -129,7 +129,7 @@ export default function Home() {
                 className="transition-colors dark:hover:text-blue-600 hover:text-blue-600 text-gray-900 dark:text-white"
                 onClick={(e) => smoothScroll(e, "contact")}
               >
-                Contact
+                Contacto
               </a>
             </nav>
             <button
@@ -167,21 +167,21 @@ export default function Home() {
                 className="w-full text-center py-2 transition ease-in-out duration-150 dark:hover:text-blue-600 hover:text-blue-600 text-gray-900 dark:text-white"
                 onClick={(e) => toggleMenuAction(e, "home")}
               >
-                Home
+                Inicio
               </a>
               <a
                 href="#about"
                 className="w-full text-center py-2 transition ease-in-out duration-150 dark:hover:text-blue-600 hover:text-blue-600 text-gray-900 dark:text-white"
                 onClick={(e) => toggleMenuAction(e, "about")}
               >
-                About Us
+                Nosotros
               </a>
               <a
                 href="#services"
                 className="w-full text-center py-2 transition ease-in-out duration-150 dark:hover:text-blue-600 hover:text-blue-600 text-gray-900 dark:text-white"
                 onClick={(e) => toggleMenuAction(e, "services")}
               >
-                Services
+                Servicios
               </a>
 
               <a
@@ -189,7 +189,7 @@ export default function Home() {
                 className="w-full text-center py-2 transition ease-in-out duration-150 dark:hover:text-blue-600 hover:text-blue-600 text-gray-900 dark:text-white"
                 onClick={(e) => toggleMenuAction(e, "contact")}
               >
-                Contact
+                Contacto
               </a>
             </nav>
           </motion.div>
@@ -234,7 +234,7 @@ export default function Home() {
                   alt="AI for Utilities"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last shadow-lg"
                   height={600}
-                  src="/main.jpg"
+                  src="/gas.avif"
                   width={600}
                 />
               </motion.div>
@@ -423,7 +423,7 @@ export default function Home() {
                   alt="Seleon team"
                   className="mx-auto h-full aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last shadow-lg"
                   height={310}
-                  src="/succes.png"
+                  src="/water.avif"
                   width={550}
                 />
               </motion.div>
@@ -440,7 +440,7 @@ export default function Home() {
               transition={{ duration: 0.9 }}
               className="text-3xl font-bold tracking-tighter sm:text-5xl text-pastel-blue"
             >
-              El 87% de los modelos de IA no llegan a producción, forma parte del 13%.
+              El 87% de los modelos de IA no llegan a producción, formá parte del 13%.
             </motion.h3>
             <motion.p
               initial={{ opacity: 0, y: -20 }}
@@ -451,7 +451,7 @@ export default function Home() {
             >
               En Seleon, nos aseguramos de que su implementación en producción
               sea eficiente y genere un impacto duradero en el negocio de
-              nuestros clientes
+              nuestros clientes.
             </motion.p>
           </div>
         </section>
