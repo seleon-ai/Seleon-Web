@@ -194,6 +194,7 @@ export default function Home() {
             </nav>
           </motion.div>
         )}
+        
       </AnimatePresence>
       <main className="flex-1" id="home">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-blue-100 via-blue-50 to-violet-100 dark:from-blue-900 dark:via-blue-800 dark:to-violet-800">
